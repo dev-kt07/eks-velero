@@ -13,11 +13,16 @@ on:
      - 'envs/dev/**'
      - '**.tf'
      - '.github/workflows/terraform.yml'
+    
   
 
 jobs:
   terraform:
     runs-on: self-hosted # Runs on your self-hosted runner instead of GitHub-hosted ones
+    defaults:
+      run:
+      
+        working-directory: envs/dev 
    
     
     steps:
